@@ -1,0 +1,226 @@
+@font-face {
+    font-family: 'Roboto_regular';
+    src: url('../assets/fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face{
+    font-family: 'Roboto_bold';
+    src: url('../assets/fonts/Roboto-Bold.ttf') format(truetype);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: hsl(234.78deg 17.56% 25.69%);
+    font-family: 'Roboto_regular';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+/* TODO ----- Main ----- */
+main{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    padding: 1em;
+    background: hsl(0deg 0% 100%);
+    border-radius: 15px;
+    align-items: center;
+    box-shadow: 0 0 30px hsl(234, 29%, 20%);
+    opacity: 100%;
+    transition: all .8s;
+}
+.imgMobile{
+    display: none;
+}
+/* TODO ----- Here Left ----- */
+main .left {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: start;
+    padding: 0 3em;
+}
+main .left h2{
+    font-family: 'Roboto_bold';
+    font-weight: bold;
+    font-size: 3em;
+    color: hsl(230.63deg 30.77% 20.39%);
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+main .left p{
+    color: hsl(236.25deg 9.2% 34.12%);
+    width: 40ch;
+    font-size: 16px;
+}
+/* TODO ----- ul/li Left ----- */
+main .left ul {
+    padding: 0;
+    list-style: none;
+}
+main .left ul li{
+    display: flex;
+    gap: 1em;
+    color: hsl(236.25deg 9.2% 34.12%);
+    font-size: 16px;
+}
+/* TODO ----- Form Left ----- */
+main .left form{
+    display: flex;
+    flex-direction: column;
+    gap: .7em;
+}
+main .left form label {
+    display: flex;
+    flex-direction: column;
+}
+main .left form label p{
+    color: hsl(230.63deg 30.77% 20.39%);
+    font-weight: bold;
+}
+/* TODO ----- Error Message ----- */
+#errorMessage{
+    color: hsl(4, 100%, 67%);
+    display: block;
+    font-size: .8em;
+    position: absolute;
+    left: 40%;
+    opacity: 0;
+    transition: all .6s;
+}
+main .left form label input{
+    outline: none;
+    border: none;
+    padding: .7em 0;
+    padding-left: 1em;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 1em;
+    transition: all .6s;
+}
+main .left form label input:focus{
+    border: 1px solid rgb(30, 30, 30);
+}
+main .left form button {
+    font-family: 'Roboto_bold';
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 1em;
+    padding: .7em 0;
+    background: linear-gradient(to right, hsl(230.63deg 30.77% 20.39%), hsl(230.63deg 30.77% 20.39%));
+    color: white;
+    transition: all .6s;
+}
+
+main .left form button:hover {
+    background: linear-gradient(to right, hsl(348, 100%, 66%), hsl(13.37deg 100% 62.16%));
+}
+/* TODO ----- Here right ----- */
+main .right{
+    width: 50%;
+}
+
+/* * ----- messageOk ----- */
+
+#messageOk{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 340px;
+    background-color: white;
+    padding: 2em;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: .4em;
+    z-index: -100;
+    opacity: 0;
+    transition: all .8s;
+}
+#messageOk h2{
+    font-size: 2.5em;
+    color: hsl(230.63deg 30.77% 20.39%);
+    font-family: 'Roboto_bold';
+    font-weight: bold;
+    margin: 0;
+}
+#messageOk p{
+    font-family: 'Roboto_regular';
+    font-size: .9em;
+}
+#messageOk p b{
+    color: hsl(230.63deg 30.77% 20.39%);
+}
+#messageOk button{
+    width: 100%;
+    font-family: 'Roboto_bold';
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 1em;
+    padding: .7em 0;
+    background: linear-gradient(to right, hsl(230.63deg 30.77% 20.39%), hsl(230.63deg 30.77% 20.39%));
+    color: white;
+    transition: all background .6s;
+}
+
+#messageOk button:hover{
+    background: linear-gradient(to right, hsl(348, 100%, 66%), hsl(13.37deg 100% 62.16%));
+}
+
+
+@media (max-width: 850px) {
+    body{
+        background-color: white;
+    }
+    main{
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        box-shadow: 0 0 0;
+        
+    }
+    main p, main ul{
+        margin-left: 1em;
+    }
+    main div h2{
+        margin-top: 1em !important;
+    }
+    main div p{
+        width: 35ch !important;
+    }
+    main ul li p{
+        width: 30ch !important;
+    }
+    .imgMobile{
+        display: block;
+    }
+    main .left{
+        width: 100vw;
+        height: fit-content;
+        padding: 0 1em;
+    }
+    main form {
+        margin: 1em auto;
+    }
+    main .right{
+        display: none;
+    }
+    #btnDismiss{
+        margin-top: 5em !important;
+    }
+}

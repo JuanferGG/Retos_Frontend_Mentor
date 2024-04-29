@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../assets/fonts/Poppins-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Poppins-Italic";
+    src: url("../assets/fonts/Poppins-Italic.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url('../assets/fonts/Poppins-Bold.ttf');
+}
+@font-face {
+    font-family: "Poppins-ExtraBoldItalic";
+    src: url("../assets/fonts/Poppins-ExtraBoldItalic.ttf") format("truetype");
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: hsl(0, 0%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins-Regular";
+}
+
+/* TODO ----- Main ----- */
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 2.5em 1em 2em;
+    background: hsl(0, 0%, 100%);
+    border-radius: 15px 15px 200px 15px;
+    width: 600px;
+}
+
+/* TODO ----- Form ----- */
+main form {
+    display: flex;
+    gap: 1em;
+}
+
+main form p {
+    font-size: 0.9em;
+    color: hsl(0, 1%, 44%);
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: .3em;
+    transition: all .8s;
+}
+main form #errorMessage{
+    font-family: Poppins-Italic;
+    color: hsl(0, 100%, 67%);
+    font-size: .8em;
+    margin-top: .5em;
+    display: block;
+    opacity: 0;
+
+    transition: all .8s;
+}
+
+main form label input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 2em;
+    width: 5.5ch;
+    border-radius: 5px;
+    border: 2px solid hsl(0, 0%, 94%);
+    font-family: 'Poppins-Bold';
+    font-weight: bold;
+    transition: all .8s;
+}
+
+main form label input:focus {
+    border-color: hsl(259, 100%, 65%);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* TODO ----- Main Div ----- */
+main div {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+main div hr {
+    color: hsl(0, 0%, 94%);
+    width: 100%;
+}
+
+main div img {
+    cursor: pointer;
+    background: black;
+    border-radius: 50%;
+    padding: 10px;
+    position: relative;
+    left: 0;
+
+    transition: all 0.8s;
+}
+
+main div img:hover {
+    background: hsl(259, 100%, 65%);
+}
+
+/* TODO ----- Main Info Data ----- */
+main .infoData {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 1em;
+}
+main .infoData h1{
+    font-family: 'Poppins-ExtraBoldItalic';
+    margin: 0;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    align-items: center;
+    gap: .3em;
+}
+main .infoData h1 p{
+    font-family: 'Poppins-ExtraBoldItalic';
+    margin: 0;
+    padding: 0;
+    color: hsl(259, 100%, 65%);
+    letter-spacing: .1em;
+}
+
+@media (max-width: 768px) {
+    main{
+        width: 70vw;
+        border-radius: 15px 15px 150px 15px;
+    }
+    main form{
+        gap: .2em;
+    }
+    main .hrImg{
+        margin: 2em 0;
+    }
+    main .hrImg img{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    main form label input{
+        width: 3.5ch;
+    }
+
+    main .infoData h1{
+        font-size: 2.3em;
+    }
+}

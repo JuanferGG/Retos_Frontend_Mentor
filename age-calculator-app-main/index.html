@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Frontend Mentor | Age calculator app</title>
+</head>
+<body>
+
+  <main>
+    <form action="">
+      <label for="">
+        <p class="pInputs">DAY</p>
+        <input class="inputs" type="number" id="inputDay" placeholder="DD">
+        <p class="errorMessage errorDay" id="errorMessage">This field is required</p>
+      </label>
+      <label for="">
+        <p class="pInputs">MONTH</p>
+        <input class="inputs" type="number" id="inputMonth" placeholder="MM">
+        <p class="errorMessage errorMonth" id="errorMessage">This field is required</p>
+      </label>
+      <label for="">
+        <p class="pInputs">YEAR</p>
+        <input class="inputs" type="number" id="inputYear" placeholder="YYYY">
+        <p class="errorMessage errorYear" id="errorMessage">This field is required</p>
+      </label>
+    </form>
+
+    <div class="hrImg">
+      <hr>
+      <img id="btnImg" src="./assets/images/icon-arrow.svg" />
+    </div>
+
+    <div class="infoData">
+      <h1><p class="" id="yearsP">--</p>years</h1>
+      <h1><p class="" id="monthsP">--</p>months</h1>
+      <h1><p class="" id="daysP">--</p>days</h1>
+    </div>
+
+
+  </main>
+
+</body>
+
+<script src="./js/app.js"></script>
+</html> 

@@ -1,0 +1,38 @@
+
+
+#contact{
+    width: 100vw;
+    height: 70vh;
+    background-color: #87c9ba;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#contact .footerContainer{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: center;
+}
+#contact .footerContainer img{
+    margin: 1em 0;
+}
+#contact .redes{
+    display: flex;
+    gap: 2em;
+}
+#contact .redes a, #contact .icons a{
+    text-decoration: none;
+    color: #326e60;
+    font-size: 1.7em;
+
+    transition: all .7s;
+}
+#contact .redes a:hover, #contact .icons a:hover{
+    color: white;
+}
+#contact .icons {
+    display: flex;
+    gap: 1em;
+}
